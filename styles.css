@@ -1,0 +1,102 @@
+:root {
+    --background-color: #a6c1ca;
+    --white-1: #ffffff;
+    --white-2: #dcdddf;
+    --black-1: #6e6f71;
+    --black-2: #404040;
+    --red-1:#e4856f;
+    --red-2: #cc7763;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 60px;
+    background-color: var(--background-color);
+    display: grid;
+    place-items: center;
+}
+div.toggle {
+    /* display: none; */
+}
+.head {
+    width: 500px;
+    height: 450px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: var(--white-1);
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.head::before {
+    content: '';
+    width: 200px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    top: -10%;
+    left: 0;
+    background-color: var(--black-2);
+    border-radius: 50%;
+    z-index: -1;
+    overflow: hidden;
+}
+.head::after {
+    content: '';
+    width: 200px;
+    height: 200px;
+    display: block;
+    position: absolute;
+    top: -10%;
+    right: 0;
+    background-color: var(--black-2);
+    border-radius: 50%;
+    z-index: -1;
+    overflow: hidden;
+}
+.eye-l {
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    background-color: var(--black-2);
+    left: 50%;
+    top: 20%;
+    transform: translate(-120%,0);
+    border-radius: 50% 50% 71% 29% / 65% 50% 50% 35%  ;
+}
+.eye-l::before {
+    content: '';
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    background-color: var(--white-1);
+    border-radius: 50%;
+    bottom: 35%;
+    right: 20%;
+}
+.eye-r {
+    position: absolute;
+    width: 120px;
+    height: 200px;
+    background-color: var(--black-2);
+    right: 50%;
+    top: 20%;
+    transform: translate(120%,0);
+    border-radius: 58% 42% 27% 73% / 50% 65% 35% 50% ;
+}
+.eye-r::before {
+    content: '';
+    width: 45px;
+    height: 45px;
+    display: block;
+    position: absolute;
+    background-color: var(--white-1);
+    border-radius: 50%;
+    bottom: 35%;
+    left: 20%;
+}
