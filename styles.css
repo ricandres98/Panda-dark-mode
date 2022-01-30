@@ -100,3 +100,45 @@ div.toggle {
     bottom: 35%;
     left: 20%;
 }
+.nose {
+    width: 100px;
+    height: 80px;
+    position: absolute;
+    top: 62%;
+    border-radius: 50%;
+    background-color: var(--black-2);
+}
+.toggle {
+    margin: 50px 0;
+    position: relative;
+}
+.toggle input {
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    z-index: -1;
+}
+.toggle label {
+    display: block;
+    width: 80px;
+    height: 40px;
+    background-color: var(--white-2);
+    border-radius: 20px;
+    padding: 3px;
+    box-shadow: 0px 1px 4px #bcbdbf;
+}
+.toggle__ball {
+    width: 35px;
+    height: 100%;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    box-shadow: 0px 1px 3px #b4c1c5;
+    transition: transform ease 0.3s;
+}
+.toggle input:checked + label {
+    background-color: #a6c1ca;
+}
+.toggle input:checked + label .toggle__ball {
+    transform: translateX(39px);
+    background-color: #dcdddf;
+}
