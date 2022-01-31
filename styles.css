@@ -4,13 +4,16 @@
     --white-2: #dcdddf;
     --black-1: #6e6f71;
     --black-2: #404040;
-    --red-1:#e4856f;
-    --red-2: #cc7763;
 }
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+body.dark {
+    --background-color: #63757a;
+    --white-1: #404040;
+    --black-2: rgb(233, 233, 233);
 }
 body {
     width: 100%;
@@ -19,9 +22,7 @@ body {
     background-color: var(--background-color);
     display: grid;
     place-items: center;
-}
-div.toggle {
-    /* display: none; */
+    transition: background ease 0.3s;
 }
 .head {
     width: 500px;
@@ -136,9 +137,11 @@ div.toggle {
     transition: transform ease 0.3s;
 }
 .toggle input:checked + label {
-    background-color: #a6c1ca;
+    background-color: #dcdddf;
+    box-shadow: 0px 1px 4px #868686;
+
+
 }
 .toggle input:checked + label .toggle__ball {
     transform: translateX(39px);
-    background-color: #dcdddf;
 }
